@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MySQL基础 | Musinn</title><meta name="keywords" content="MySQL,数据库"><meta name="author" content="姬顶盒,musinn@qq.com"><meta name="copyright" content="姬顶盒"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="MySQL 介绍简介百度百科：  MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL 是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。MySQL 是一种关系型数据库管理系统，关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL基础">
+<meta property="og:url" content="https://blog.musinn.me/posts/bce68613/index.html">
+<meta property="og:site_name" content="Musinn">
+<meta property="og:description" content="MySQL 介绍简介百度百科：  MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL 是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。MySQL 是一种关系型数据库管理系统，关">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210122133626.png">
+<meta property="article:published_time" content="2020-06-05T00:58:44.000Z">
+<meta property="article:modified_time" content="2021-08-19T03:43:51.311Z">
+<meta property="article:author" content="姬顶盒">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="数据库">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210122133626.png"><link rel="shortcut icon" href="https://cdn.musinn.cn/0/magic33.ico"><link rel="canonical" href="https://blog.musinn.me/posts/bce68613/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'MySQL基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-19 11:43:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><script async src="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Musinn" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="Musinn" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.musinn.cn/0/magic33.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E6%97%B6%E9%97%B4%E8%BD%B4"><i class="fa-fw /archives/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E6%A0%87%E7%AD%BE"><i class="fa-fw /tags/"></i><span> 1</span></a></li><li><a class="site-page child" href="/%E5%88%86%E7%B1%BB"><i class="fa-fw /categories/"></i><span> 2</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友達</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 日常</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%9B%B8%E5%86%8C"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E8%BF%BD%E7%95%AA"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/hpptalk/"><i class="fa-fw fas fa-link"></i><span> 盒曰</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210122133626.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Musinn</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E6%97%B6%E9%97%B4%E8%BD%B4"><i class="fa-fw /archives/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E6%A0%87%E7%AD%BE"><i class="fa-fw /tags/"></i><span> 1</span></a></li><li><a class="site-page child" href="/%E5%88%86%E7%B1%BB"><i class="fa-fw /categories/"></i><span> 2</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友達</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 日常</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%9B%B8%E5%86%8C"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E8%BF%BD%E7%95%AA"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/hpptalk/"><i class="fa-fw fas fa-link"></i><span> 盒曰</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MySQL基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-06-05T00:58:44.000Z" title="发表于 2020-06-05 08:58:44">2020-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-19T03:43:51.311Z" title="更新于 2021-08-19 11:43:51">2021-08-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MySQL基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="MySQL-介绍"><a href="#MySQL-介绍" class="headerlink" title="MySQL 介绍"></a>MySQL 介绍</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>百度百科：</p>
+<blockquote>
+<p>MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL 是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。<br>MySQL 是一种关系型数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</p>
+</blockquote>
+<h2 id="数据库系统概述"><a href="#数据库系统概述" class="headerlink" title="数据库系统概述"></a>数据库系统概述</h2><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>数据库（DataBase，DB）是以一定的组织方式将相关的数据组织在一起存放在计算机外存储器上，并能为多个用户共享的与应用程序彼此独立的一组相关数据的集合。它不仅包括描述事物的数据本身，而且包括相关事物之间的联系。对数据库中数据的增加、删除、修改和检索等操作，由数据库管理系统进行统一控制。</p>
+<h3 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h3><p>数据库管理系统（DataBase Management System，DBMS）是为数据库的建立、使用和维护而配置的软件，它提供了安全性和完整性等统一控制机制，方便用户管理和存取大量的数据资源。例如，MySQL 就是计算机上使用的一种数据库管理系统。</p>
+<p>数据库管理系统的主要功能包括以下几个方面：</p>
+<ul>
+<li>数据定义功能</li>
+<li>数据操纵功能</li>
+<li>数据库的运行管理</li>
+<li>数据库的建立和维护功能</li>
+</ul>
+<h3 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h3><p>数据库系统（DataBase System，DBS）是指引进数据库技术后的计算机系统，能实现有组织地、动态地存储大量相关数据，提供数据处理和信息资源共享的便利手段。由 5 部分组成：硬件系统、数据库集合、数据库管理系统及相关软件、数据库管理员（DataBase Administrator，DBA）和用户。其中，数据库管理系统是数据库系统的核心。</p>
+<h3 id="数据库应用系统"><a href="#数据库应用系统" class="headerlink" title="数据库应用系统"></a>数据库应用系统</h3><p>数据库应用系统（DataBase Application System，DBAS）是指系统开发人员利用数据库系统资源开发出来的，面向某一类信息处理问题而建立的软件系统，例如，以数据库为基础的学籍管理系统等。</p>
+<h2 id="数据库系统的特点"><a href="#数据库系统的特点" class="headerlink" title="数据库系统的特点"></a>数据库系统的特点</h2><p>数据库系统的主要特点如下：</p>
+<ol>
+<li><a href="数据结构化是数据库系统与文件系统的根本区别。">数据结构化</a></li>
+<li><a href="数据共享减少了数据冗余，而且解决了重复存储时经常发生的因不同应用修改数据的不同副本而造成的数据不一致问题。">数据的共享性高，冗余度低，易于扩充</a></li>
+<li><a href="包括物理独立性和逻辑独立性。">数据独立性强</a></li>
+<li><a href="为保证数据库数据的正确性和有效性，数据库系统提供了安全性控制、完整性控制、并发性控制、数据库恢复。">数据统一管理和控制</a></li>
+</ol>
+<h1 id="MySQL-安装与配置"><a href="#MySQL-安装与配置" class="headerlink" title="MySQL 安装与配置"></a>MySQL 安装与配置</h1><p>下面的链接介绍的非常详细了，避免篇幅过长具体不再重复赘述。</p>
+<p><a href="https://www.runoob.com/w3cnote/windows10-mysql-installer.html" target="_blank">点击查看安装教程</a></p>
+<p>记住改好的密码，每次打开都需要登陆。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">命令格式: mysql -u 用户名 -p 密码</span><br><span class="line">例如:     mysql -u root -p password</span><br></pre></td></tr></table></figure>
+<h1 id="数据库的创建与管理"><a href="#数据库的创建与管理" class="headerlink" title="数据库的创建与管理"></a>数据库的创建与管理</h1><h2 id="MySQL-数据库简介"><a href="#MySQL-数据库简介" class="headerlink" title="MySQL 数据库简介"></a>MySQL 数据库简介</h2><h3 id="数据库的构成"><a href="#数据库的构成" class="headerlink" title="数据库的构成"></a>数据库的构成</h3><p>MySQL 数据库主要分为系统数据库、示例数据库和用户数据库。 1.系统数据库</p>
+<p>sys 数据库:</p>
+<ul>
+<li>information_schema 数据库</li>
+<li>performance_schema 数据库</li>
+<li>mysql 数据库</li>
+</ul>
+<p>示例数据库:</p>
+<ul>
+<li>sakila 和 world 示例数据库是完整的示例。</li>
+</ul>
+<p>用户数据库:</p>
+<ul>
+<li>自己创建的</li>
+</ul>
+<h3 id="数据库文件"><a href="#数据库文件" class="headerlink" title="数据库文件"></a>数据库文件</h3><p>数据库管理的核心任务包括创建、操作和支持数据库。在 MySQL 中，每个数据库都对应存放在一个与数据库同名的文件夹中。MySQL 数据库文件有“.FRM”、“.MYD”和“.MYI”3 种文件，其中“.FRM”是描述表结构的文件，“.MYD”是表的数据文件，“.MYI”是表数据文件中的索引文件。</p>
+<h3 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h3><p>MySQL 数据库中的数据在逻辑上被组织成一系列数据库对象，这些数据库对象包括：表、视图、约束、索引、存储过程、触发器、用户定义函数、用户和角色。</p>
+<h2 id="管理数据库"><a href="#管理数据库" class="headerlink" title="管理数据库"></a>管理数据库</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>SQL 语句创建用户数据库其语法格式如下：<br>CREATE {DATABASE|SCHEMA}[IF NOT EXISTS] &lt;数据库文件名&gt;<br>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#创建名为D_sample的数据库</span><br><span class="line">create datebase D_sample;</span><br><span class="line"></span><br><span class="line">#为避免因重复创建时系统显示的错误信息,可使用:</span><br><span class="line">create database if not exists D_sample;</span><br></pre></td></tr></table></figure>
+<h3 id="查看已有的数据库"><a href="#查看已有的数据库" class="headerlink" title="查看已有的数据库"></a>查看已有的数据库</h3><p>其语法格式如下：<br>SHOW DATABASES;<br>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<h3 id="打开数据库"><a href="#打开数据库" class="headerlink" title="打开数据库"></a>打开数据库</h3><p>在对某数据库操作前需要先选中<br>例如: 打开 D_sample 数据库:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use D_sample;</span><br></pre></td></tr></table></figure>
+<h3 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h3><p>修改数据库 D_sample 的默认字符集和校对规则。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter database D_sample</span><br><span class="line">  default character set=gbk</span><br><span class="line">  default collate=gbk_chinese_ci;</span><br></pre></td></tr></table></figure>
+<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><p>删除 D_sample 数据库:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database D_sample1;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL-图形化管理工具"><a href="#MySQL-图形化管理工具" class="headerlink" title="MySQL 图形化管理工具"></a>MySQL 图形化管理工具</h2><p>使用图形化管理工具，可让操作变得更简单直接。<br>常用的有 Workbench、Navicat、SQLyog 等等很多。</p>
+<h1 id="表的创建与管理"><a href="#表的创建与管理" class="headerlink" title="表的创建与管理"></a>表的创建与管理</h1><p>数据表是数据库中最重要的对象，用于存储数据库中的所有数据。因此，数据表的设计与实现将直接影响数据库能否合理高效地使用。</p>
+<h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p>在 MySQL 中，表用于存储实体集和实体间联系的数据。一个表就是一个关系，表实质上就是行列的集合，每一行代表一条记录，每一列代表记录的一个字段。<br>在 MySQL 数据库中，表通常具有以下几个特点：</p>
+<ol>
+<li>表通常代表一个实体</li>
+<li>表由行和列组成</li>
+<li>行值在同一个表中具有唯一性</li>
+<li>字段名在同一个表中具有唯一性</li>
+<li>行和列的无序性</li>
+</ol>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>系统数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整数型</td>
+<td>TINYINT,SMALLINT,MEDIUMINT,INT,BIGINT</td>
+</tr>
+<tr>
+<td>精确数值型</td>
+<td>DECIMAL(M,D),NUMERIC(M,D)</td>
+</tr>
+<tr>
+<td>浮点型</td>
+<td>FLOAT, REAL,DOUBLE</td>
+</tr>
+<tr>
+<td>位型</td>
+<td>BIT</td>
+</tr>
+<tr>
+<td>二进制型</td>
+<td>BINARY,VARBINARY</td>
+</tr>
+<tr>
+<td>字符型</td>
+<td>CHAR,VARCHAR,BLOB,TEXT,ENUM,SET</td>
+</tr>
+<tr>
+<td>Unicode 字符型</td>
+<td>NCHAR,NVARCHAR</td>
+</tr>
+<tr>
+<td>文本型</td>
+<td>TINYTEXT,TEXT,MEDIUMTEXT,LONGTEXT</td>
+</tr>
+<tr>
+<td>BLOB 类型</td>
+<td>TINYBLOB,BLOB,MEDIUMBLOB,LONGBLOB</td>
+</tr>
+<tr>
+<td>日期时间型</td>
+<td>DATETIME,DATE,TIMESTAMP,TIME,YEAR</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="数据表操作"><a href="#数据表操作" class="headerlink" title="数据表操作"></a>数据表操作</h2><h3 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h3><p>创建数据表的语法格式如下：</p>
+<p>CREATE [TEMPORARY] TABLE [IF NOT EXISTS] &lt;表名&gt;<br>[(&lt;字段名&gt; &lt;数据类型&gt; [完整性约束条件][,…])][表的选项];<br>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">use D_sample;</span><br><span class="line">create table student</span><br><span class="line">( #设置主键约束</span><br><span class="line">学号 char(9) primary key,</span><br><span class="line">姓名 varchar(10),</span><br><span class="line">性别 char(2),</span><br><span class="line">出生日期 date,</span><br><span class="line">民族 varchar(10),</span><br><span class="line">政治面貌 varchar(8)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="查看表的信息"><a href="#查看表的信息" class="headerlink" title="查看表的信息"></a>查看表的信息</h3><p>查看信息:SHOW TABLES;<br>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<p>查看表:{DESCRIBE |DESC}&lt;表名&gt; [字段名];<br>例如查看 D_sample 数据库中 student 表的信息:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc student;</span><br></pre></td></tr></table></figure>
+<p>修改表:ALTER TABLE &lt;表名&gt;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alter table student #添加字段</span><br><span class="line">add 专业 char(30);</span><br><span class="line">#course 表中的学分字段的数据类型改为 smallint</span><br><span class="line">modify 学分 smallint; #删除字段</span><br><span class="line">drop column 专业; #重命名表</span><br><span class="line">rename as stu;</span><br></pre></td></tr></table></figure>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>删除表语法格式如下:<br>DROP [TEMPORARY] TABLE [IF EXISTS] &lt;表名&gt; [,&lt;表名&gt;…];</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table student;</span><br></pre></td></tr></table></figure>
+<h2 id="表数据操作"><a href="#表数据操作" class="headerlink" title="表数据操作"></a>表数据操作</h2><h3 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h3><p>INSERT INTO &lt;表名&gt; [&lt;字段名&gt;[,…]]VALUES (&lt;常量&gt;[,…]);</p>
+<p>向数据库 D_sample 的 student 表中添加数据:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">insert into student</span><br><span class="line">values(&#x27;201839001&#x27;,&#x27;刘一&#x27;,&#x27;女&#x27;,&#x27;1998-07-07&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br><span class="line">insert into student</span><br><span class="line">values(&#x27;201839002&#x27;,&#x27;陈二&#x27;,&#x27;男&#x27;,&#x27;2000-06-12&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br><span class="line">insert into student</span><br><span class="line">values(&#x27;201839003&#x27;,&#x27;张三&#x27;,&#x27;男&#x27;,&#x27;1899-03-29&#x27;,&#x27;汉族&#x27;,&#x27;中共党员&#x27;);</span><br><span class="line">values(&#x27;201839003&#x27;,&#x27;李四&#x27;,&#x27;男&#x27;,&#x27;2000-01-25&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br><span class="line">values(&#x27;201839003&#x27;,&#x27;王五&#x27;,&#x27;男&#x27;,&#x27;1999-08-24&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br><span class="line">values(&#x27;201839003&#x27;,&#x27;赵六&#x27;,&#x27;男&#x27;,&#x27;1999-07-14&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br><span class="line">values(&#x27;201839003&#x27;,&#x27;孙七&#x27;,&#x27;男&#x27;,&#x27;1999-02-14&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br><span class="line">values(&#x27;201839003&#x27;,&#x27;周八&#x27;,&#x27;男&#x27;,&#x27;1999-01-06&#x27;,&#x27;汉族&#x27;,&#x27;共青团员&#x27;);</span><br></pre></td></tr></table></figure>
+<p>向数据库 D_sample 的 course 表中添加数据:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">insert into course</span><br><span class="line">values(&#x27;07001&#x27;,&#x27;计算机应用基础&#x27;,&#x27;掌握计算机基本操作&#x27;,4,4,&#x27;1&#x27;);</span><br><span class="line">insert into course</span><br><span class="line">values(&#x27;07002&#x27;,&#x27;计算机网络技术基础&#x27;,&#x27;掌握计算机网络应用&#x27;,4,4,&#x27;1&#x27;);</span><br><span class="line">insert into course</span><br><span class="line">values(&#x27;07003&#x27;,&#x27;数据库技术基础&#x27;,&#x27;掌握数据库系统设计&#x27;,4,4,&#x27;2&#x27;);</span><br></pre></td></tr></table></figure>
+<h3 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h3><p>修改表中数据语法格式如下:<br>UPDATE &lt;表名&gt;<br>SET &lt;字段名&gt;=&lt;表达式&gt;[,…][where &lt;条件&gt;];<br>例如:<br>将 student 表中姓名值为“周八”的出生日期改为“1999-02-01”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update student</span><br><span class="line">set 出生日期=&#x27;1999-02-01&#x27;</span><br><span class="line">where 姓名=&#x27;周八&#x27;;</span><br></pre></td></tr></table></figure>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>删除表中数据语法格式如下:<br>DELETE FROM &lt;表名&gt;<br>[WHERE&lt;条件&gt;];</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>参考：<br>菜鸟教程、MySQL 数据库应用与实践教程</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+<p>[表的选项]:</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:musinn@qq.com">姬顶盒</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.musinn.me/posts/bce68613/">https://blog.musinn.me/posts/bce68613/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.musinn.me" target="_blank">Musinn</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MySQL/">MySQL</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210122133626.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/3958530d/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210122133648.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">MarkDown快速入门</div></div></a></div><div class="next-post pull-right"><a href="/posts/41767f46/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210123181543.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用Github Action实现全自动部署</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.musinn.cn/0/magic33.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">姬顶盒</div><div class="author-info__description">while(!death){time--;exp++;}</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/musinn"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/setobox" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:elpsycongri@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1102778969&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://s.team/p/qkf-jrjh/BQDPQNNM" target="_blank" title="Steam好友代码192113765"><i class="fab fa-steam"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">MySQL 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="toc-number">1.2.</span> <span class="toc-text">数据库系统概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.1.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.2.</span> <span class="toc-text">数据库管理系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.3.</span> <span class="toc-text">数据库系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.4.</span> <span class="toc-text">数据库应用系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">数据库系统的特点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">MySQL 安装与配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">数据库的创建与管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%80%E4%BB%8B"><span class="toc-number">3.1.</span> <span class="toc-text">MySQL 数据库简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-number">3.1.1.</span> <span class="toc-text">数据库的构成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-number">3.1.2.</span> <span class="toc-text">数据库文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1"><span class="toc-number">3.1.3.</span> <span class="toc-text">数据库对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.2.</span> <span class="toc-text">管理数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-number">3.2.1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E6%9C%89%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.2.2.</span> <span class="toc-text">查看已有的数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.2.3.</span> <span class="toc-text">打开数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.2.4.</span> <span class="toc-text">修改数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.2.5.</span> <span class="toc-text">删除数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">3.3.</span> <span class="toc-text">MySQL 图形化管理工具</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">表的创建与管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B-1"><span class="toc-number">4.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">4.3.</span> <span class="toc-text">数据表操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">4.3.1.</span> <span class="toc-text">创建数据表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-number">4.3.2.</span> <span class="toc-text">查看表的信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%A1%A8"><span class="toc-number">4.3.3.</span> <span class="toc-text">删除表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-number">4.4.</span> <span class="toc-text">表数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-number">4.4.1.</span> <span class="toc-text">添加数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE"><span class="toc-number">4.4.2.</span> <span class="toc-text">更新数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-number">4.4.3.</span> <span class="toc-text">删除数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/990c54fb/" title="𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210122133612.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！"/></a><div class="content"><a class="title" href="/posts/990c54fb/" title="𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！">𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</a><time datetime="2021-08-17T08:39:36.568Z" title="发表于 2021-08-17 16:39:36">2021-08-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/b255499c/" title="Tomcat和Servlet应用配置及部分问题"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.jsdelivr.net/gh/setobox/Pic-repo/imgs/20210331202530.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tomcat和Servlet应用配置及部分问题"/></a><div class="content"><a class="title" href="/posts/b255499c/" title="Tomcat和Servlet应用配置及部分问题">Tomcat和Servlet应用配置及部分问题</a><time datetime="2021-03-22T09:52:44.000Z" title="发表于 2021-03-22 17:52:44">2021-03-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 姬顶盒</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20210612" target="_blank"><img class="icp-icon" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://icp.gov.moe/images/ico64.png">萌ICP备 20210612号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'musinn-9gc8fl60511867b2',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'musinn-9gc8fl60511867b2',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer src="/live2d-widget/autoload.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

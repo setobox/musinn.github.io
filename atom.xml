@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Musinn</title>
+  <icon>https://cdn.musinn.cn/0/magic33.ico</icon>
+  
+  <link href="https://blog.musinn.me/atom.xml" rel="self"/>
+  
+  <link href="https://blog.musinn.me/"/>
+  <updated>2021-08-19T03:45:43.536Z</updated>
+  <id>https://blog.musinn.me/</id>
+  
+  <author>
+    <name>姬顶盒</name>
+    <email>musinn@qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</title>
+    <link href="https://blog.musinn.me/posts/990c54fb/"/>
+    <id>https://blog.musinn.me/posts/990c54fb/</id>
+    <published>2021-08-17T08:39:36.568Z</published>
+    <updated>2021-08-19T03:45:43.536Z</updated>
+    
+    
+    <summary type="html">一篇用于测试的文章</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Tomcat和Servlet应用配置及部分问题</title>
+    <link href="https://blog.musinn.me/posts/b255499c/"/>
+    <id>https://blog.musinn.me/posts/b255499c/</id>
+    <published>2021-03-22T09:52:44.000Z</published>
+    <updated>2021-08-19T03:44:55.515Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;持续更新中……&lt;/p&gt;
+&lt;h1 id=&quot;Tomcat&quot;&gt;&lt;a href=&quot;#Tomcat&quot; class=&quot;headerlink&quot; title=&quot;Tomcat&quot;&gt;&lt;/a&gt;Tomcat&lt;/h1&gt;&lt;details green&gt;&lt;summary&gt; 维基百科复制来的长篇大论：</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://blog.musinn.me/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="JavaWEb" scheme="https://blog.musinn.me/tags/JavaWEb/"/>
+    
+    <category term="Tomcat" scheme="https://blog.musinn.me/tags/Tomcat/"/>
+    
+    <category term="Servlet" scheme="https://blog.musinn.me/tags/Servlet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HexoEditor(适用于Hexo的专用编辑器)</title>
+    <link href="https://blog.musinn.me/posts/c708cf/"/>
+    <id>https://blog.musinn.me/posts/c708cf/</id>
+    <published>2021-03-22T01:21:41.000Z</published>
+    <updated>2021-03-22T10:09:36.606Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;details green&gt;&lt;summary&gt; 无关紧要的前言 &lt;/summary&gt;
+              &lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://blog.musinn.me/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://blog.musinn.me/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Hexo" scheme="https://blog.musinn.me/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo添加文章时自动打开编辑器</title>
+    <link href="https://blog.musinn.me/posts/e7fa2d4f/"/>
+    <id>https://blog.musinn.me/posts/e7fa2d4f/</id>
+    <published>2021-01-26T04:10:34.000Z</published>
+    <updated>2021-01-27T02:11:48.105Z</updated>
+    
+    
+    <summary type="html">通过JS脚本监听hexo new，并自动打开md编辑器</summary>
+    
+    
+    
+    <category term="博客优化" scheme="https://blog.musinn.me/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="博客优化" scheme="https://blog.musinn.me/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Github Action实现全自动部署</title>
+    <link href="https://blog.musinn.me/posts/41767f46/"/>
+    <id>https://blog.musinn.me/posts/41767f46/</id>
+    <published>2021-01-26T03:49:52.000Z</published>
+    <updated>2021-08-19T03:43:03.351Z</updated>
+    
+    
+    <summary type="html">通过Github Action，将繁琐的部署交给云端</summary>
+    
+    
+    
+    <category term="博客优化" scheme="https://blog.musinn.me/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="博客优化" scheme="https://blog.musinn.me/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL基础</title>
+    <link href="https://blog.musinn.me/posts/bce68613/"/>
+    <id>https://blog.musinn.me/posts/bce68613/</id>
+    <published>2020-06-05T00:58:44.000Z</published>
+    <updated>2021-08-19T03:43:51.311Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MySQL-介绍&quot;&gt;&lt;a href=&quot;#MySQL-介绍&quot; class=&quot;headerlink&quot; title=&quot;MySQL 介绍&quot;&gt;&lt;/a&gt;MySQL 介绍&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://blog.musinn.me/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="MySQL" scheme="https://blog.musinn.me/tags/MySQL/"/>
+    
+    <category term="数据库" scheme="https://blog.musinn.me/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MarkDown快速入门</title>
+    <link href="https://blog.musinn.me/posts/3958530d/"/>
+    <id>https://blog.musinn.me/posts/3958530d/</id>
+    <published>2020-05-25T04:10:12.000Z</published>
+    <updated>2021-08-19T03:45:10.533Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MarkDown简单介绍&quot;&gt;&lt;a href=&quot;#MarkDown简单介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://blog.musinn.me/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="MarkDown" scheme="https://blog.musinn.me/tags/MarkDown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python图形用户界面(Tkinter)</title>
+    <link href="https://blog.musinn.me/posts/6c8750a3/"/>
+    <id>https://blog.musinn.me/posts/6c8750a3/</id>
+    <published>2020-05-25T00:21:26.000Z</published>
+    <updated>2021-08-19T03:44:11.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Python-GUI-简介&quot;&gt;&lt;a href=&quot;#Python-GUI-简介&quot; class=&quot;headerlink&quot; title=&quot;Python GUI 简介&quot;&gt;&lt;/a&gt;Python GUI 简介&lt;/h1&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://blog.musinn.me/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Python" scheme="https://blog.musinn.me/tags/Python/"/>
+    
+    <category term="GUI" scheme="https://blog.musinn.me/tags/GUI/"/>
+    
+  </entry>
+  
+</feed>
