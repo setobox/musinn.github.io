@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Musinn</title>
+  <title>盒の箱庭</title>
   <icon>https://cdn.musinn.cn/0/magic33.ico</icon>
-  
+  <subtitle>姬顶盒</subtitle>
   <link href="https://blog.musinn.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.musinn.cn/"/>
-  <updated>2021-08-20T07:54:16.795Z</updated>
+  <updated>2021-08-20T08:24:52.693Z</updated>
   <id>https://blog.musinn.cn/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</title>
     <link href="https://blog.musinn.cn/posts/990c54fb/"/>
     <id>https://blog.musinn.cn/posts/990c54fb/</id>
-    <published>2021-08-20T07:54:16.795Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <published>2021-08-20T08:24:52.693Z</published>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
     <summary type="html">一篇用于测试的文章</summary>
@@ -36,7 +36,7 @@
     <link href="https://blog.musinn.cn/posts/b255499c/"/>
     <id>https://blog.musinn.cn/posts/b255499c/</id>
     <published>2021-03-22T09:52:44.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
       
@@ -66,7 +66,7 @@
     <link href="https://blog.musinn.cn/posts/c708cf/"/>
     <id>https://blog.musinn.cn/posts/c708cf/</id>
     <published>2021-03-22T01:21:41.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
       
@@ -94,7 +94,7 @@
     <link href="https://blog.musinn.cn/posts/e7fa2d4f/"/>
     <id>https://blog.musinn.cn/posts/e7fa2d4f/</id>
     <published>2021-01-26T04:10:34.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
     <summary type="html">通过JS脚本监听hexo new，并自动打开md编辑器</summary>
@@ -113,7 +113,7 @@
     <link href="https://blog.musinn.cn/posts/41767f46/"/>
     <id>https://blog.musinn.cn/posts/41767f46/</id>
     <published>2021-01-26T03:49:52.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
     <summary type="html">通过Github Action，将繁琐的部署交给云端</summary>
@@ -132,7 +132,7 @@
     <link href="https://blog.musinn.cn/posts/bce68613/"/>
     <id>https://blog.musinn.cn/posts/bce68613/</id>
     <published>2020-06-05T00:58:44.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
       
@@ -159,7 +159,7 @@
     <link href="https://blog.musinn.cn/posts/3958530d/"/>
     <id>https://blog.musinn.cn/posts/3958530d/</id>
     <published>2020-05-25T04:10:12.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
       
@@ -184,7 +184,7 @@
     <link href="https://blog.musinn.cn/posts/6c8750a3/"/>
     <id>https://blog.musinn.cn/posts/6c8750a3/</id>
     <published>2020-05-25T00:21:26.000Z</published>
-    <updated>2021-08-20T07:54:16.795Z</updated>
+    <updated>2021-08-20T08:24:52.693Z</updated>
     
     
       

@@ -3,26 +3,26 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Musinn</title>
+    <title>盒の箱庭</title>
     <link>https://blog.musinn.cn/</link>
     
     <image>
       <url>https://cdn.musinn.cn/0/magic33.ico</url>
-      <title>Musinn</title>
+      <title>盒の箱庭</title>
       <link>https://blog.musinn.cn/</link>
     </image>
     
     <atom:link href="https://blog.musinn.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>while(!death){time--;exp++;}</description>
-    <pubDate>Fri, 20 Aug 2021 07:54:16 GMT</pubDate>
+    <pubDate>Fri, 20 Aug 2021 08:24:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</title>
       <link>https://blog.musinn.cn/posts/990c54fb/</link>
       <guid>https://blog.musinn.cn/posts/990c54fb/</guid>
-      <pubDate>Fri, 20 Aug 2021 07:54:16 GMT</pubDate>
+      <pubDate>Fri, 20 Aug 2021 08:24:52 GMT</pubDate>
       
       <description>一篇用于测试的文章</description>
       
