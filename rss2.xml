@@ -15,25 +15,8 @@
     <atom:link href="https://blog.musinn.me/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>while(!death){time--;exp++;}</description>
-    <pubDate>Fri, 20 Aug 2021 06:46:56 GMT</pubDate>
+    <pubDate>Fri, 20 Aug 2021 07:20:04 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</title>
-      <link>https://blog.musinn.me/posts/990c54fb/</link>
-      <guid>https://blog.musinn.me/posts/990c54fb/</guid>
-      <pubDate>Fri, 20 Aug 2021 06:46:56 GMT</pubDate>
-      
-      <description>一篇用于测试的文章</description>
-      
-      
-      
-      
-      
-      
-      <comments>https://blog.musinn.me/posts/990c54fb/#disqus_thread</comments>
-      
-    </item>
     
     <item>
       <title>Tomcat和Servlet应用配置及部分问题</title>
