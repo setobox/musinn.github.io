@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</title>
+      <link href="/posts/990c54fb/"/>
+      <url>/posts/990c54fb/</url>
+      
+        <content type="html"><![CDATA[<pre><code>欢迎来到我的博客！这是我的第一篇博客，也是一片测试文章</code></pre><p>本篇文章将不断更新用来测试博客美化效果</p><h3 id="测试标题"><a href="#测试标题" class="headerlink" title="测试标题"></a>测试标题</h3><h1>Hello World！</h1><h3 id="测试代码块"><a href="#测试代码块" class="headerlink" title="测试代码块"></a>测试代码块</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World！<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="测试列表"><a href="#测试列表" class="headerlink" title="测试列表"></a>测试列表</h3><ol><li>a</li><li>b</li><li>c</li><li>d</li></ol><details ><summary> 折叠框 </summary>              <div class='content'>                            </div>            </details><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">带&#123;% u 下划线 %&#125;的文本</span><br><span class="line">带&#123;% emp 着重号 %&#125;的文本</span><br><span class="line">带&#123;% wavy 波浪线 %&#125;的文本</span><br><span class="line">带&#123;% del 删除线 %&#125;的文本</span><br><span class="line">键盘样式的文本：&#123;% kbd command %&#125; + &#123;% kbd D %&#125;</span><br><span class="line">密码样式的文本：&#123;% psw 这里没有验证码 %&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs test1 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**This is Tab 1.**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**This is Tab 2.**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**This is Tab 3.**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure><hr>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Tomcat和Servlet应用配置及部分问题</title>
       <link href="/posts/b255499c/"/>
       <url>/posts/b255499c/</url>
