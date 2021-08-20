@@ -48,3 +48,6 @@
 [data-theme='dark'] .top-img {
   filter: brightness(0.8);
 }
+#footer {
+  background: none;
+}
