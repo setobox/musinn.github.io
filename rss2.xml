@@ -15,23 +15,33 @@
     <atom:link href="https://blog.musinn.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>while(!death){time--;exp++;}</description>
-    <pubDate>Tue, 07 Sep 2021 07:11:29 GMT</pubDate>
+    <pubDate>Thu, 23 Sep 2021 09:43:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭！</title>
-      <link>https://blog.musinn.cn/posts/990c54fb/</link>
-      <guid>https://blog.musinn.cn/posts/990c54fb/</guid>
-      <pubDate>Tue, 07 Sep 2021 07:11:29 GMT</pubDate>
+      <title>[object Object]</title>
+      <link>https://blog.musinn.cn/posts/824ac3d0/</link>
+      <guid>https://blog.musinn.cn/posts/824ac3d0/</guid>
+      <pubDate>Thu, 23 Sep 2021 09:43:43 GMT</pubDate>
       
-      <description>一篇用于测试的文章</description>
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Git基础使用及特殊操作&quot;&gt;&lt;a href=&quot;#Git基础使用及特殊操作&quot; class=&quot;headerlink&quot; title=&quot;Git基础使用及特殊操作&quot;&gt;&lt;/a&gt;Git基础使用及特殊操作&lt;/h1&gt;&lt;h2 id=&quot;Git安装&quot;&gt;&lt;a href=&quot;#Git安装&quot;</description>
+          
+        
       
       
       
       
+      <category domain="https://blog.musinn.cn/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
       
       
-      <comments>https://blog.musinn.cn/posts/990c54fb/#disqus_thread</comments>
+      <category domain="https://blog.musinn.cn/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      
+      <comments>https://blog.musinn.cn/posts/824ac3d0/#disqus_thread</comments>
       
     </item>
     
