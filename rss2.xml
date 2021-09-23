@@ -15,20 +15,21 @@
     <atom:link href="https://blog.musinn.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>while(!death){time--;exp++;}</description>
-    <pubDate>Thu, 23 Sep 2021 09:45:16 GMT</pubDate>
+    <pubDate>Thu, 23 Sep 2021 09:55:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[object Object]</title>
-      <link>https://blog.musinn.cn/posts/824ac3d0/</link>
-      <guid>https://blog.musinn.cn/posts/824ac3d0/</guid>
-      <pubDate>Thu, 23 Sep 2021 09:45:16 GMT</pubDate>
+      <title>Git复习笔记</title>
+      <link>https://blog.musinn.cn/posts/65ee6cd0/</link>
+      <guid>https://blog.musinn.cn/posts/65ee6cd0/</guid>
+      <pubDate>Thu, 23 Sep 2021 09:55:10 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;Git基础使用及特殊操作&quot;&gt;&lt;a href=&quot;#Git基础使用及特殊操作&quot; class=&quot;headerlink&quot; title=&quot;Git基础使用及特殊操作&quot;&gt;&lt;/a&gt;Git基础使用及特殊操作&lt;/h1&gt;&lt;h2 id=&quot;Git安装&quot;&gt;&lt;a href=&quot;#Git安装&quot;</description>
+      <description>&lt;h1 id=&quot;Git基础使用及特殊操作&quot;&gt;&lt;a href=&quot;#Git基础使用及特殊操作&quot; class=&quot;headerlink&quot; title=&quot;Git基础使用及特殊操作&quot;&gt;&lt;/a&gt;Git基础使用及特殊操作&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;​   </description>
           
         
       
@@ -41,7 +42,7 @@
       <category domain="https://blog.musinn.cn/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
       
       
-      <comments>https://blog.musinn.cn/posts/824ac3d0/#disqus_thread</comments>
+      <comments>https://blog.musinn.cn/posts/65ee6cd0/#disqus_thread</comments>
       
     </item>
     
